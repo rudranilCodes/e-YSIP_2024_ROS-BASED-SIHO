@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<robot name="mini_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mini_bot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mini_bot_description)/urdf/mini_bot.trans" />
+<xacro:include filename="$(find mini_bot_description)/urdf/mini_bot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.003366273080494329 -0.0030845883454288375 0.06642482936528883" rpy="0 0 0"/>
+    <mass value="1.0961273825484432"/>
+    <inertia ixx="0.001687" iyy="0.003366" izz="0.004197" ixy="-4.4e-05" iyz="1.5e-05" ixz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fl_wheel_1">
+  <inertial>
+    <origin xyz="6.723635849249093e-05 0.017245976400964785 7.089979057708223e-05" rpy="0 0 0"/>
+    <mass value="1.1408959349654209"/>
+    <inertia ixx="0.000578" iyy="0.000887" izz="0.000578" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.056257 -0.050399 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/fl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.056257 -0.050399 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/fl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bl_wheel_1">
+  <inertial>
+    <origin xyz="6.708839401498023e-05 0.01724597640096477 7.089979057706836e-05" rpy="0 0 0"/>
+    <mass value="1.1408959349654209"/>
+    <inertia ixx="0.000578" iyy="0.000887" izz="0.000578" ixy="1e-06" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.040741 -0.050399 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/bl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.040741 -0.050399 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/bl_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="imu">
+  <inertial>
+    <origin xyz="-4.6717834472666253e-07 4.1602829558944066e-07 0.0024999629478301977" rpy="0 0 0"/>
+    <mass value="0.0314"/>
+    <inertia ixx="1e-06" iyy="4e-06" izz="5e-06" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.011903 -0.011581 -0.075249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.011903 -0.011581 -0.075249" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/imu_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="laser">
+  <inertial>
+    <origin xyz="-0.015611263147567804 -0.010500551424615874 0.002638240082579929" rpy="0 0 0"/>
+    <mass value="1.1225003858332423"/>
+    <inertia ixx="0.000458" iyy="0.000732" izz="0.000909" ixy="-3e-06" iyz="6e-06" ixz="-0.000104"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.028392 -0.007904 -0.119049" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/laser_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.028392 -0.007904 -0.119049" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/laser_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="fr_wheel_2">
+  <inertial>
+    <origin xyz="-6.781388806209598e-05 -0.017246967231456627 7.089982925253396e-05" rpy="0 0 0"/>
+    <mass value="1.1408959349654209"/>
+    <inertia ixx="0.000578" iyy="0.000887" izz="0.000578" ixy="1e-06" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.055579 0.054501 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/fr_wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.055579 0.054501 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/fr_wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="br_wheel_1">
+  <inertial>
+    <origin xyz="-6.79618525397524e-05 -0.017246967231456654 7.089982925255478e-05" rpy="0 0 0"/>
+    <mass value="1.1408959349654209"/>
+    <inertia ixx="0.000578" iyy="0.000887" izz="0.000578" ixy="1e-06" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.041419 0.054501 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/br_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.041419 0.054501 -0.037877" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find mini_bot_description)/meshes/br_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="fl_joint" type="continuous">
+  <origin xyz="0.056257 0.050399 0.037877" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="fl_wheel_1"/>
+  <axis xyz="0.003868 0.999987 0.003292"/>
+</joint>
+
+<joint name="bl_joint" type="continuous">
+  <origin xyz="-0.040741 0.050399 0.037877" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="bl_wheel_1"/>
+  <axis xyz="0.003868 0.999987 0.003292"/>
+</joint>
+
+<joint name="imu_joint" type="fixed">
+  <origin xyz="-0.011903 0.011581 0.075249" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu"/>
+</joint>
+
+<joint name="laser_joint" type="fixed">
+  <origin xyz="0.028392 0.007904 0.119049" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="laser"/>
+</joint>
+
+<joint name="fr_joint" type="continuous">
+  <origin xyz="0.055579 -0.054501 0.037877" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="fr_wheel_2"/>
+  <axis xyz="0.003868 0.999987 -0.003292"/>
+</joint>
+
+<joint name="br_joint" type="continuous">
+  <origin xyz="-0.041419 -0.054501 0.037877" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="br_wheel_1"/>
+  <axis xyz="0.003868 0.999987 -0.003292"/>
+</joint>
+
+</robot>
