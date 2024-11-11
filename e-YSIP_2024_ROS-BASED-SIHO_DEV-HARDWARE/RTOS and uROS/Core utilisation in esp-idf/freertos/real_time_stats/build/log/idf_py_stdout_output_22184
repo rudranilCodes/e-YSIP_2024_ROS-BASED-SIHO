@@ -1,0 +1,835 @@
+q_drv:0x00,+͡�Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type S�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 30 2024 22:41:39[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0992ch ( 39212) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019954 vaddr=3ffb0000 size=0222ch (  8748) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bb88 vaddr=40080000 size=04490h ( 17552) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16adch ( 92892) map[0m
+[0;32mI (164) esp_image: segment 4: paddr=00036b04 vaddr=40084490 size=08c48h ( 35912) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) cpu_start: Multicore app[0m
+[0;32mI (205) cpu_start: Pro cpu start user code[0m
+[0;32mI (206) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (206) cpu_start: Application information:[0m
+[0;32mI (209) cpu_start: Project name:     real_time_stats[0m
+[0;32mI (214) cpu_start: App version:      v5.2.1-dirty[0m
+[0;32mI (220) cpu_start: Compile time:     May 30 2024 22:41:06[0m
+[0;32mI (226) cpu_start: ELF file SHA256:  60b16625d...[0m
+[0;32mI (231) cpu_start: ESP-IDF:          v5.2.1-dirty[0m
+[0;32mI (236) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (241) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (246) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (251) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (258) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFB2CB8 len 0002D348 (180 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 4008D0D8 len 00012F28 (75 KiB): IRAM[0m
+[0;32mI (291) spi_flash: detected chip: generic[0m
+[0;32mI (294) spi_flash: flash io: dio[0m
+[0;33mW (298) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (312) main_task: Started on CPU0[0m
+[0;32mI (322) main_task: Calling app_main()[0m
+
+
+Getting real time stats over 100 ticks
+[0;32mI (512) main_task: Returned from app_main()[0m
+| Task | Run Time | Percentage
+| stats | 1181 | 0%
+| spin2 | 225347 | 11%
+| spin1 | 235314 | 11%
+| spin3 | 225382 | 11%
+| spin4 | 225352 | 11%
+| spin5 | 207233 | 10%
+| spin0 | 225371 | 11%
+| IDLE1 | 424881 | 21%
+| IDLE0 | 218882 | 10%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| main | Deleted
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin2 | 243731 | 12%
+| spin4 | 243520 | 12%
+| IDLE1 | 460228 | 23%
+| IDLE0 | 110280 | 5%
+| spin3 | 245296 | 12%
+| spin5 | 225336 | 11%
+| spin1 | 225297 | 11%
+| spin0 | 253503 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| IDLE0 | 118447 | 5%
+| IDLE1 | 488624 | 24%
+| spin4 | 245354 | 12%
+| spin0 | 225336 | 11%
+| spin3 | 225297 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225297 | 11%
+| spin2 | 253503 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin5 | 243506 | 12%
+| spin1 | 253456 | 12%
+| IDLE1 | 477031 | 23%
+| IDLE0 | 115566 | 5%
+| spin4 | 225304 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225352 | 11%
+| spin2 | 225304 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 974 | 0%
+| spin0 | 243507 | 12%
+| spin3 | 253517 | 12%
+| IDLE1 | 477030 | 23%
+| IDLE0 | 95567 | 4%
+| spin1 | 235296 | 11%
+| spin2 | 225304 | 11%
+| spin4 | 225304 | 11%
+| spin5 | 235336 | 11%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin2 | 233467 | 11%
+| spin4 | 253463 | 12%
+| IDLE1 | 550544 | 27%
+| IDLE0 | 40283 | 2%
+| spin3 | 235296 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225297 | 11%
+| spin0 | 235336 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin1 | 233467 | 11%
+| IDLE1 | 562319 | 28%
+| IDLE0 | 38489 | 1%
+| spin4 | 235256 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225352 | 11%
+| spin5 | 225336 | 11%
+| spin2 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin3 | 233521 | 11%
+| spin5 | 253501 | 12%
+| IDLE1 | 542323 | 27%
+| IDLE0 | 32156 | 1%
+| spin2 | 225304 | 11%
+| spin4 | 225256 | 11%
+| spin0 | 225336 | 11%
+| spin1 | 253459 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin0 | 253502 | 12%
+| IDLE0 | 38487 | 1%
+| IDLE1 | 550489 | 27%
+| spin5 | 235338 | 11%
+| spin1 | 225297 | 11%
+| spin2 | 225304 | 11%
+| spin4 | 225256 | 11%
+| spin3 | 253521 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin2 | 233468 | 11%
+| spin4 | 253408 | 12%
+| IDLE1 | 550502 | 27%
+| IDLE0 | 50324 | 2%
+| spin3 | 225297 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225352 | 11%
+| spin0 | 235337 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin5 | 243730 | 12%
+| spin1 | 243520 | 12%
+| IDLE1 | 484916 | 24%
+| IDLE0 | 95611 | 4%
+| spin4 | 235256 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225352 | 11%
+| spin2 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin0 | 243731 | 12%
+| spin3 | 243520 | 12%
+| IDLE1 | 474916 | 23%
+| IDLE0 | 95609 | 4%
+| spin1 | 245354 | 12%
+| spin2 | 225304 | 11%
+| spin4 | 225256 | 11%
+| spin5 | 253503 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| IDLE0 | 103736 | 5%
+| IDLE1 | 503360 | 25%
+| spin3 | 245354 | 12%
+| spin5 | 225304 | 11%
+| spin1 | 225304 | 11%
+| spin2 | 225336 | 11%
+| spin4 | 225297 | 11%
+| spin0 | 253503 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin2 | 243506 | 12%
+| spin4 | 253456 | 12%
+| IDLE1 | 477031 | 23%
+| IDLE0 | 115566 | 5%
+| spin3 | 225304 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225352 | 11%
+| spin0 | 225304 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 974 | 0%
+| spin5 | 243507 | 12%
+| spin1 | 253517 | 12%
+| IDLE1 | 477030 | 23%
+| IDLE0 | 95567 | 4%
+| spin4 | 235296 | 11%
+| spin0 | 225304 | 11%
+| spin3 | 225304 | 11%
+| spin2 | 235336 | 11%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin0 | 233467 | 11%
+| spin3 | 253463 | 12%
+| IDLE1 | 550544 | 27%
+| IDLE0 | 40283 | 2%
+| spin1 | 235296 | 11%
+| spin2 | 225336 | 11%
+| spin4 | 225297 | 11%
+| spin5 | 235336 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin4 | 233467 | 11%
+| IDLE1 | 562319 | 28%
+| IDLE0 | 38489 | 1%
+| spin3 | 235256 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225352 | 11%
+| spin2 | 225336 | 11%
+| spin0 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin1 | 233521 | 11%
+| spin2 | 253501 | 12%
+| IDLE1 | 542323 | 27%
+| IDLE0 | 32156 | 1%
+| spin0 | 225304 | 11%
+| spin3 | 225256 | 11%
+| spin5 | 225336 | 11%
+| spin4 | 253459 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin5 | 253502 | 12%
+| IDLE0 | 38487 | 1%
+| IDLE1 | 550489 | 27%
+| spin2 | 235338 | 11%
+| spin4 | 225297 | 11%
+| spin0 | 225304 | 11%
+| spin3 | 225256 | 11%
+| spin1 | 253521 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin0 | 233468 | 11%
+| spin3 | 253408 | 12%
+| IDLE1 | 550502 | 27%
+| IDLE0 | 50324 | 2%
+| spin1 | 225297 | 11%
+| spin2 | 225336 | 11%
+| spin4 | 225352 | 11%
+| spin5 | 235337 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin2 | 243730 | 12%
+| spin4 | 243520 | 12%
+| IDLE1 | 484916 | 24%
+| IDLE0 | 95611 | 4%
+| spin3 | 235256 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225352 | 11%
+| spin0 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin5 | 243731 | 12%
+| spin1 | 243520 | 12%
+| IDLE1 | 474916 | 23%
+| IDLE0 | 95609 | 4%
+| spin4 | 245354 | 12%
+| spin0 | 225304 | 11%
+| spin3 | 225256 | 11%
+| spin2 | 253503 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 974 | 0%
+| IDLE0 | 103737 | 5%
+| IDLE1 | 503360 | 25%
+| spin1 | 245354 | 12%
+| spin2 | 225304 | 11%
+| spin4 | 225304 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225297 | 11%
+| spin5 | 253503 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin0 | 243506 | 12%
+| spin3 | 253456 | 12%
+| IDLE1 | 477031 | 23%
+| IDLE0 | 115566 | 5%
+| spin1 | 225304 | 11%
+| spin2 | 225336 | 11%
+| spin4 | 225352 | 11%
+| spin5 | 225304 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 974 | 0%
+| spin2 | 243507 | 12%
+| spin4 | 253517 | 12%
+| IDLE1 | 477030 | 23%
+| IDLE0 | 95567 | 4%
+| spin3 | 235296 | 11%
+| spin5 | 225304 | 11%
+| spin1 | 225304 | 11%
+| spin0 | 235336 | 11%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin5 | 233467 | 11%
+| spin1 | 253463 | 12%
+| IDLE1 | 550544 | 27%
+| IDLE0 | 40283 | 2%
+| spin4 | 235296 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225297 | 11%
+| spin2 | 235336 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin3 | 233467 | 11%
+| IDLE1 | 562319 | 28%
+| IDLE0 | 38489 | 1%
+| spin1 | 235256 | 11%
+| spin2 | 225336 | 11%
+| spin4 | 225352 | 11%
+| spin0 | 225336 | 11%
+| spin5 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin4 | 233521 | 11%
+| spin0 | 253501 | 12%
+| IDLE1 | 542323 | 27%
+| IDLE0 | 32156 | 1%
+| spin5 | 225304 | 11%
+| spin1 | 225256 | 11%
+| spin2 | 225336 | 11%
+| spin3 | 253459 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin2 | 253502 | 12%
+| IDLE0 | 38487 | 1%
+| IDLE1 | 550489 | 27%
+| spin0 | 235338 | 11%
+| spin3 | 225297 | 11%
+| spin5 | 225304 | 11%
+| spin1 | 225256 | 11%
+| spin4 | 253521 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin5 | 233468 | 11%
+| spin1 | 253408 | 12%
+| IDLE1 | 550502 | 27%
+| IDLE0 | 50324 | 2%
+| spin4 | 225297 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225352 | 11%
+| spin2 | 235337 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin0 | 243730 | 12%
+| spin3 | 243520 | 12%
+| IDLE1 | 484916 | 24%
+| IDLE0 | 95611 | 4%
+| spin1 | 235256 | 11%
+| spin2 | 225336 | 11%
+| spin4 | 225352 | 11%
+| spin5 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin2 | 243731 | 12%
+| spin4 | 243520 | 12%
+| IDLE1 | 474916 | 23%
+| IDLE0 | 95609 | 4%
+| spin3 | 245354 | 12%
+| spin5 | 225304 | 11%
+| spin1 | 225256 | 11%
+| spin0 | 253503 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| IDLE0 | 103736 | 5%
+| IDLE1 | 503360 | 25%
+| spin4 | 245354 | 12%
+| spin0 | 225304 | 11%
+| spin3 | 225304 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225297 | 11%
+| spin2 | 253503 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin5 | 243506 | 12%
+| spin1 | 253456 | 12%
+| IDLE1 | 477031 | 23%
+| IDLE0 | 115566 | 5%
+| spin4 | 225304 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225352 | 11%
+| spin2 | 225304 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 974 | 0%
+| spin0 | 243507 | 12%
+| spin3 | 253517 | 12%
+| IDLE1 | 477030 | 23%
+| IDLE0 | 95567 | 4%
+| spin1 | 235296 | 11%
+| spin2 | 225304 | 11%
+| spin4 | 225304 | 11%
+| spin5 | 235336 | 11%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin2 | 233467 | 11%
+| spin4 | 253463 | 12%
+| IDLE1 | 550544 | 27%
+| IDLE0 | 40283 | 2%
+| spin3 | 235296 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225297 | 11%
+| spin0 | 235336 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin1 | 233467 | 11%
+| IDLE1 | 562319 | 28%
+| IDLE0 | 38489 | 1%
+| spin4 | 235256 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225352 | 11%
+| spin5 | 225336 | 11%
+| spin2 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin3 | 233521 | 11%
+| spin5 | 253501 | 12%
+| IDLE1 | 542323 | 27%
+| IDLE0 | 32156 | 1%
+| spin2 | 225304 | 11%
+| spin4 | 225256 | 11%
+| spin0 | 225336 | 11%
+| spin1 | 253459 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin0 | 253502 | 12%
+| IDLE0 | 38487 | 1%
+| IDLE1 | 550489 | 27%
+| spin5 | 235338 | 11%
+| spin1 | 225297 | 11%
+| spin2 | 225304 | 11%
+| spin4 | 225256 | 11%
+| spin3 | 253521 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin2 | 233468 | 11%
+| spin4 | 253408 | 12%
+| IDLE1 | 550502 | 27%
+| IDLE0 | 50324 | 2%
+| spin3 | 225297 | 11%
+| spin5 | 225336 | 11%
+| spin1 | 225352 | 11%
+| spin0 | 235337 | 11%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| spin5 | 243730 | 12%
+| spin1 | 243520 | 12%
+| IDLE1 | 484916 | 24%
+| IDLE0 | 95611 | 4%
+| spin4 | 235256 | 11%
+| spin0 | 225336 | 11%
+| spin3 | 225352 | 11%
+| spin2 | 253467 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 976 | 0%
+| spin0 | 243731 | 12%
+| spin3 | 243520 | 12%
+| IDLE1 | 474916 | 23%
+| IDLE0 | 95609 | 4%
+| spin1 | 245354 | 12%
+| spin2 | 225304 | 11%
+| spin4 | 225256 | 11%
+| spin5 | 253503 | 12%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+Real time stats obtained
+
+
+Getting real time stats over 100 ticks
+| Task | Run Time | Percentage
+| stats | 975 | 0%
+| IDLE0 | 103736 | 5%
+| IDLE1 | 503360 | 25%
+| spin3 | 245354 | 12%
+| spin5 | 225304 | 11%
+| spin1 | 225304 | 11%
+| spin2 | 225336 | 11%
+| spin4 | 225297 | 11%
+| spin0 | 253503 | 12%
+| esp_timer | 0 | 0%
+| ipc1 | 0 | 0%
+| Tmr Svc | 0 | 0%
+| ipc0 | 0 | 0%
+Real time stats obtained

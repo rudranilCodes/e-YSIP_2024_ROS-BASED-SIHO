@@ -1,0 +1,16 @@
+xTaskCreate() creates a task. The task's memory is dynamically allocated.
+
+xTaskCreateStatic() creates a task. The task's memory is statically allocated, i.e., provided by the user.
+
+xTaskCreatePinnedToCore() creates a task with a particular core affinity. The task's memory is dynamically allocated.
+
+xTaskCreateStaticPinnedToCore() creates a task with a particular core affinity. The task's memory is statically allocated, i.e., provided by the user
+
+
+The ...PinnedToCore() versions of the task creation function API differ from their vanilla counterparts by having an extra xCoreID parameter that is used to specify the created task's core affinity. The valid values for core affinity are:
+
+0, which pins the created task to Core 0
+
+1, which pins the created task to Core 1
+
+tskNO_AFFINITY, which allows the task to be run on both cores
